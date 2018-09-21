@@ -1,0 +1,44 @@
+name = 'emp'
+description = Emp Bootstrap subtheme Theme.
+core = 7.x
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[sec_top_links] = Section Top Links
+regions[top_sec_lang_selector] = Language Section
+regions[main_navigation] = Main Navigation
+regions[banner] = Banner Section
+regions[gallery] = Gallery Section
+
+regions[performance_deck] = Performance Deck
+regions[content] = Content
+
+regions[twitter] = Twitter Section
+regions[facebook] = Facebook Section
+regions[youtube] = YouTube Section
+
+regions[programs] = Department Programs
+
+;regions[footer_about_us] = Footer About Us Section
+;regions[footer_contact] = Footer Contact Section
+;regions[footer_map] = Footer Map Section
+regions[footer_menu_links] = Footer Menu Links
+regions[footer_bottom_links] = Footer bottom Links
+
+regions[highlighted] = Highlighted
+regions[sidebar_first] = Sidebar First
+regions[sidebar_second] = Sidebar Second
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = css/style.css
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+
+scripts[] = 'js/main.js'
