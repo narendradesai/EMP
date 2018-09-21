@@ -26,6 +26,7 @@ regions[programs] = Department Programs
 ;regions[footer_map] = Footer Map Section
 regions[footer_menu_links] = Footer Menu Links
 regions[footer_bottom_links] = Footer bottom Links
+regions[carousel] = Image Carousel
 
 regions[highlighted] = Highlighted
 regions[sidebar_first] = Sidebar First

@@ -5,6 +5,7 @@
 	<?php //print $messages; ?>
 
     <div class="content">
+    <?php print render($page['carousel']); ?>
         <div class="slide-show">
             <div class="slide-image image-1 move-to-center">
                 <div class="skewed"></div>
