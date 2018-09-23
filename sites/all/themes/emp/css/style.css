@@ -20,9 +20,18 @@ html body a {
   text-decoration: none;
   color: #000000;
 }
+html body button {
+  border: 1px solid transparent;
+  background: #ffffff;
+}
 
 .header {
-  font-size: 2vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-size: 1rem;
+  background: #ffffff;
+  z-index: 1;
 }
 .header ul {
   display: flex;
@@ -31,16 +40,74 @@ html body a {
 .header a {
   white-space: nowrap;
 }
-.header .menu-bar li:hover {
+.header .menu .menu-bar-button {
+  display: none;
+  width: 1em;
+}
+.header .menu .menu-bar-button div {
+  border-bottom: 1px solid #000000;
+  padding: 2px 0;
+}
+@media only screen and (max-width: 540px) {
+  .header .menu .menu-bar-button {
+    display: block;
+  }
+}
+.header .menu .menu-bar-expanded li {
+  border-bottom: 1px solid transparent;
+}
+.header .menu .menu-bar-expanded li:hover {
+  border-bottom: 1px solid #D9D9D9;
+}
+.header .menu .menu-bar-expanded > .active {
   border-bottom: 1px solid red;
+}
+.header .menu .menu-bar-expanded > .active:hover {
+  border-bottom: 1px solid red;
+}
+@media only screen and (max-width: 540px) {
+  .header .menu .menu-bar-expanded {
+    display: none;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .header .menu > .active {
+    display: block;
+    text-align: center;
+    background: #ffffff;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    margin-top: 1em;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .header .close .menu-bar-button div:nth-child(odd) {
+    border-bottom: 1px solid transparent;
+  }
+  .header .close .menu-bar-button div:nth-child(even) {
+    animation: skew-button 250ms linear 1 forwards;
+  }
+  .header .close .menu-bar-button div:nth-child(even)::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid black;
+    margin: -2px 0;
+    animation: skew-button-after 250ms linear 1 forwards;
+  }
 }
 
 .content {
+  margin-top: calc(2em + 2em + 0.3rem);
+  z-index: 0;
   position: relative;
   overflow: hidden;
 }
 .content .slide-show {
   display: flex;
+  position: relative;
   height: 60vh;
   color: #ffffff;
   text-shadow: 0 0 20px #000000;
@@ -71,7 +138,7 @@ html body a {
   margin-left: 30%;
   margin-bottom: 0;
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 540px) {
   .content .slide-show .slide-image .text h1 {
     font-size: 4.5vmax;
   }
@@ -81,15 +148,40 @@ html body a {
   margin-top: 0;
   margin-left: 20%;
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 540px) {
   .content .slide-show .slide-image .text p {
     font-size: 2.7vmax;
   }
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 540px) {
   .content .slide-show .slide-image .text {
     width: 70%;
   }
+}
+.content .slide-show .slide-nav-bar {
+  display: flex;
+  flex-direction: column;
+  right: 0.6em;
+  height: 90%;
+  justify-content: center;
+}
+.content .slide-show .slide-nav-bar button {
+  width: 0.5em;
+  height: 2em;
+  margin: 1em;
+  box-shadow: 0 0 1em 0 black;
+}
+.content .slide-show .slide-nav-bar .active {
+  background: red;
+}
+.content .slide-show .slide-buttons {
+  bottom: 0.6em;
+  right: 0.2em;
+}
+.content .slide-show .slide-buttons .slide-button {
+  margin-right: 0.8em;
+  padding: 0.8em;
+  box-shadow: 0 0 1em 0 black;
 }
 .content .slide-show .image-1 {
   background: url("images/5.png");
@@ -146,10 +238,10 @@ html body a {
 }
 .content .services .service > img {
   margin: 0.5em;
-  height: 20vmax;
+  height: 16em;
   align-self: center;
 }
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 540px) {
   .content .services .service > img {
     height: 57vmax;
   }
@@ -161,7 +253,7 @@ html body a {
   font-size: 2rem;
   margin: 0.5vmax 0;
 }
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 540px) {
   .content .services .service > .text {
     margin: 0 5vmax;
   }
@@ -179,13 +271,13 @@ html body a {
     border-bottom: 1px solid #D9D9D9;
   }
 }
-@media only screen and (max-width: 1300px) and (min-width: 370px) {
+@media only screen and (max-width: 1300px) and (min-width: 540px) {
   .content .services .service {
     flex-direction: row;
     width: auto;
   }
 }
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 540px) {
   .content .services .service {
     width: 60vmax;
   }
@@ -197,6 +289,7 @@ html body a {
 }
 
 .footer {
+  position: relative;
   background: #0D9361;
   display: flex;
   justify-content: space-around;
@@ -204,12 +297,12 @@ html body a {
   padding-bottom: 50px;
 }
 .footer > div {
-  margin: 10px;
+  margin: 1em 2em;
 }
 .footer .contact p {
   font-size: 2rem;
 }
-@media only screen and (min-width: 370px) {
+@media only screen and (min-width: 540px) {
   .footer .contact p {
     margin: 0.5vmax 0;
   }
@@ -222,7 +315,6 @@ html body a {
   margin-top: 0.5vmax;
 }
 .footer .about {
-  position: relative;
   width: 50%;
   text-align: end;
 }
@@ -234,7 +326,7 @@ html body a {
   background: red;
   width: 100%;
 }
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 540px) {
   .footer {
     flex-direction: column;
     align-items: center;
@@ -316,6 +408,22 @@ html body a {
   }
   100% {
     left: -100%;
+  }
+}
+@keyframes skew-button {
+  0% {
+    transform: skew(0, 0);
+  }
+  100% {
+    transform: skew(0, 36deg);
+  }
+}
+@keyframes skew-button-after {
+  0% {
+    transform: skew(0, 0);
+  }
+  100% {
+    transform: skew(0, -56deg);
   }
 }
 /* </keyframes> */

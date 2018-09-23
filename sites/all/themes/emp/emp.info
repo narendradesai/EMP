@@ -19,7 +19,7 @@ regions[twitter] = Twitter Section
 regions[facebook] = Facebook Section
 regions[youtube] = YouTube Section
 
-regions[programs] = Department Programs
+regions[services] = Services Section
 
 ;regions[footer_about_us] = Footer About Us Section
 ;regions[footer_contact] = Footer Contact Section
