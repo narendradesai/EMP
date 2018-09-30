@@ -1,4 +1,4 @@
-<div class="footer">
+<div id="footer-id" class="footer">
     <div class="contact">
         <p>Enquiry</p>
         <form >
@@ -17,4 +17,5 @@
         <p>About Us</p>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto atque deleniti dolor saepe dolorum est odio optio. Reiciendis possimus nihil, sed enim distinctio adipisci quisquam, dolorem aliquam dolorum maiores id.</p>
     </div>
+    <div class="goTop">^</div>
 </div>
