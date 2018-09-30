@@ -1,0 +1,31 @@
+/****** carousel *************/
+
+.carousel-inner img {
+	width: 100%;
+	height: 100%;
+}
+.carousel-caption{ text-align: right; top: 36%; bottom: auto; left:auto; font-family: 'haettenschweilerregular';}
+
+.carousel-caption h3{ font-size: 3rem; text-shadow: 3px 1px 2px rgba(0, 0, 0, 0.4);  letter-spacing: 1px;}
+.carousel-caption p{ font-size: 1.5rem; letter-spacing: 1px; background-color: rgba(0, 0, 0, 0.5); margin-left: 20px; padding: 0px 10px; display: inline;}
+.carousel-indicators{ bottom: 10%; /*z-index: 1500;*/}
+.primaryNav .nav-item:hover,
+.primaryNav .nav-item.active {
+	/*background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 4px;*/
+	color: #FFFFFF;
+  opacity: 1;
+  border-bottom: 1px solid #ffffff;
+}
+/* ul.menu a {
+    text-decoration: none !important;
+} */
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .carousel-caption{ bottom: 5px;}
+    .carousel-caption h3{ font-size: 1.2rem;}
+}
+@media (min-width: 320px) and (max-width: 480px) {
+    .carousel-caption{ bottom: 5px;}
+    .carousel-caption h3{ font-size: 1.2rem;}
+}
