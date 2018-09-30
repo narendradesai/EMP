@@ -20,15 +20,17 @@
  * @ingroup views_templates
  */
 ?>
-
-<div class="services">
-<?php foreach($rows as $id => $row) { ?>
-    <div class="service">
-        <?php print_r($row['field_service_image']); ?>
-        <div class="text">
-            <p> <?php print_r($row['title']); ?> </p>
-            <?php print_r($row['body']); ?>
+<div class="service-section">
+    <div class="services">
+        
+    <?php foreach($rows as $id => $row) { ?>
+        <div class="service">
+            <?php print_r($row['field_service_image']); ?>
+            <div class="text">
+                <p> <?php print_r($row['title']); ?> </p>
+                <?php print_r($row['body']); ?>
+            </div>
         </div>
+    <?php } ?>
     </div>
-<?php } ?>
 </div>
