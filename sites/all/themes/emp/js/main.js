@@ -169,14 +169,19 @@ jQuery(document).ready(function(){
           });
           var menu = document.getElementsByClassName("main-menu");
           menu[0].addEventListener("click", function (e) {
-            if (menu[0].classList.contains("close")) {
-              menu[0].classList.remove("close");
-              menu[0].getElementsByTagName("ul")[0].classList.remove("active");
-            } else {
-              menu[0].classList.add("close");
-              menu[0].getElementsByTagName("ul")[0].classList.add("active");
+              
+          var mediaQuery = window.matchMedia("(max-width: 540px)");
+          if (mediaQuery.matches) {
+              if (menu[0].classList.contains("close")) {
+                menu[0].classList.remove("close");
+                menu[0].getElementsByTagName("ul")[0].classList.remove("active");
+              } else {
+                menu[0].classList.add("close");
+                menu[0].getElementsByTagName("ul")[0].classList.add("active");
+              }
             }
           });
+          
           var goTop = document.getElementsByClassName("goTop");
           goTop[0].addEventListener("click", function (e) {
             var startY = _this.currentYPosition();
