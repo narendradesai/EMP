@@ -1,8 +1,10 @@
 <div class="header">
     <ul class="">
-        <li class="padding-0-5-rem"><a href="#">Logo</a></li>
-        <li class="main-menu">
-            <div class="menu-bar-button padding-0-5-rem">
+        <li class="padding-0-5-rem">
+            <p class="title">Emergency Management System</p>   
+        <!-- <a href="#">Logo</a></li> -->
+        <li class="main-menu ">
+            <div class="menu-bar-button">
                 <div></div>
                 <div></div>
                 <div></div>

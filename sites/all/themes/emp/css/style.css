@@ -26,7 +26,8 @@ html body button {
 }
 
 .header {
-  margin-top: 1.5rem;
+  /* margin-top: 1.5rem; */
+  padding-top: 1rem;
   position: fixed;
   top: 0;
   width: 100%;
@@ -34,6 +35,7 @@ html body button {
   background: #ffffff;
   z-index: 1;
 }
+
 .header ul {
   display: flex;
   justify-content: space-around;
@@ -49,6 +51,12 @@ html body button {
   border-bottom: 1px solid #000000;
   padding: 2px 0;
 }
+.header .main-menu .leaf  {
+  padding: 0 0.5rem;
+  opacity: 0.90;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
 @media only screen and (max-width: 540px) {
   .header .main-menu .menu-bar-button {
     display: block;
@@ -58,7 +66,8 @@ html body button {
   border-bottom: 1px solid transparent;
 }
 .header .main-menu .menu li:hover {
-  border-bottom: 1px solid #D9D9D9;
+  transition: 0.3s ease;
+  border-bottom: 4px solid #000000;
 }
 .header .main-menu .menu > .active {
   border-bottom: 1px solid red;
@@ -114,7 +123,7 @@ html body button {
 }
 .content .service-header {
   margin-top: 1em;
-  font-size: 1.3rem;
+  font-size: 2rem;
   text-align: center;
 }
 .content .service-section .services {
@@ -127,18 +136,17 @@ html body button {
   display: flex;
   flex-direction: column;
   margin: 0.5em;
-  width: 21vmax;
+  width: 30vmax;
 }
 .content .service-section .services .service > img {
   margin: 0.5em;
-  height: 16em;
   align-self: center;
 }
-@media only screen and (max-width: 540px) {
+/* @media only screen and (max-width: 540px) {
   .content .service-section .services .service > img {
     height: 57vmax;
   }
-}
+} */
 .content .service-section .services .service > .text {
   margin: 1vmax;
 }
@@ -149,6 +157,7 @@ html body button {
 @media only screen and (max-width: 540px) {
   .content .service-section .services .service > .text {
     margin: 0 5vmax;
+    text-align: center;
   }
 }
 .content .service-section .services .service:nth-child(2) {
@@ -172,7 +181,7 @@ html body button {
 }
 @media only screen and (max-width: 540px) {
   .content .service-section .services .service {
-    width: 60vmax;
+    width: 100vmax;
   }
 }
 @media only screen and (max-width: 1300px) {
